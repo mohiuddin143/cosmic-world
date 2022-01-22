@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@700&family=Raleway:wght@500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+.highlight{
+    color: #FF008E;
+}
+header{
+    /* height: 100vh; */
+    background-image: url(./images/cloud.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0,0,0,0.5);
+    background-blend-mode: overlay;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+    /* without hight align items can't set center */
+}
+
+.navigation{
+    display: flex;
+}
+.navigation li{
+    list-style: none;
+    margin: 20px;
+}
+.navigation li a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    padding: 15px 10px;
+}
+/* ভিতরের কমপোনেন্ট গুলোকে ফ্লেক্স দিয়ে করা আর বড় লে আউট গুলো কে গ্রিড় দিয়ে করা ভালো। তাতে রেসপন্সিব করা সহজ হয়। */
+.banner{
+    height: calc(100vh - 80px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.banner-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.banner-left h1{
+    font-size: 45px;
+    color: #fff;
+}
+.banner-left p{
+    font-size: 18px;
+    color: #fff;
+    line-height: 1.5;
+    margin: 20px 0;
+}
+.primary-button{
+    outline: 0;
+    border: 0;
+    padding: 15px 20px;
+    background-image: linear-gradient(90deg, #c50770,#FF008E);
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 7px #a5075e;
+    position: relative;
+    top: 0;
+}
+.primary-button:active{
+    top: 5px;
+    box-shadow: 0 2px #a5075e;
+}
+.banner-right{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.banner-right img{
+    width: 100%;
+}
+.section-title h1{
+    font-size: 30px;
+    border-bottom: 0 2px #a5075e;
+}
